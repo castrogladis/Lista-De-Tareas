@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+	background: url(imagenes/fondo.jpg) no-repeat center center/cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+	padding: 40px 0;
+	;
+}
+
+.contenedor {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: antiquewhite;
+	width: 700px;
+	min-height: 500px;
+	padding: 40px;
+	border: 2px solid fuchsia;
+	border-radius: 20px;
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: bold;
+	color: blueviolet;
+}
+
+input {
+	width: 80%;
+	height: 50px;
+	font-size: 26px;
+	margin: 20px;
+	padding: 10px;
+	border: 2px solid fuchsia;
+	border-radius: 4px;
+	color: blue
+}
+
+input:focus {
+	outline: none;
+	border: 2px solid blueviolet;
+}
+
+button {
+	width: 150px;
+	height: 60px;
+	font-size: 22px;
+	background: pink;
+	color: blue;
+	padding: 20px;
+	border: none;
+	border-radius: 10px;
+	user-select: none;
+	cursor: pointer;
+}
+
+#lista-de-tareas {
+	width: 80%;
+	margin-top: 20px;
+}
+
+/* Estilos generales de una tarea */
+.tarea {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	width: 100%;
+	min-height: 70px;
+	font-size: 26px;
+	padding: 10px;
+	margin-top: 10px;
+	color: blueviolet;
+	background-color: antiquewhite;
+	border: 2px solid fuchsia;
+	border-radius: 4px;
+}
+
+/* Estilos para tarea completada */
+
+.tarea.completada {
+	text-decoration: line-through;
+	background-color: rgb(240, 156, 231);
+	border: none;
+}
+
+.tarea p {
+	max-width: 350px;
+}
+
+i {
+	margin: 5px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.icono-completar {
+	color: chartreuse;
+}
+
+.icono-eliminar {
+	color: red;
+}
+
+.icono-completar:hover,
+.icono-eliminar:hover {
+	background-color: rgba(255, 255, 255, 0.523);
+}
+
+@media (max-width: 720px) {
+	.contenedor {
+	  max-width: 85%;
+	} 
+
+	input {
+		font-size: 22px;
+	}
+}
